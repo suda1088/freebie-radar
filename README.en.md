@@ -65,7 +65,7 @@ Upstream: [ZiChuanLan/freebie-radar](https://github.com/ZiChuanLan/freebie-radar
 | Admin UI | Source ops panel | Collection-job management, source workspace (edit/retention/run history), AI queue status, push history, failure notes |
 | Collection | Playwright login-state collection, FlareSolverr | Same, plus local Playwright scripts (`scripts/pw-collect.mjs`) and a VPS headless cookie runner (`scripts/vps-cookie-runner.py`) |
 | Performance | List SQL optimizations | Feed list 8–13s → 1–2s (expression index `idx_items_effective_time`); freshness = publish recency + expiry date |
-| Branding | Resource Radar (Linear / Things style) | Title "苏打小窝 · 发现与收藏"; green studio-style UI (see release status above) |
+| Branding | Resource Radar (Linear / Things style) | Title "苏打小窝 · 发现与收藏"; green studio-style UI |
 
 ### Advantages over upstream
 

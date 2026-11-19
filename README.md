@@ -63,7 +63,7 @@
 | 管理界面 | 数据源运维面板 | 采集任务管理、数据源工作台（编辑/保留/运行历史）、AI 队列状态、推送历史、失败原因展示等完整管理后台 |
 | 采集 | Playwright 登录态采集、FlareSolverr | 同上，另加本机 Playwright 采集脚本（`scripts/pw-collect.mjs`）与 VPS 无头 Cookie 执行器（`scripts/vps-cookie-runner.py`） |
 | 性能 | 列表合并 SQL 优化等 | 列表从 8–13 秒优化到 1–2 秒（表达式索引 `idx_items_effective_time`）；时效性改为发布时间保鲜期 + 截止时间双条件 |
-| 品牌 | 资源雷达（Linear / Things 风） | 标题改为「苏打小窝 · 发现与收藏」；界面为绿色工作室风格（见上方发布状态） |
+| 品牌 | 资源雷达（Linear / Things 风） | 标题改为「苏打小窝 · 发现与收藏」；界面为绿色工作室风格 |
 
 ### 本分支相对上游的优点
 
