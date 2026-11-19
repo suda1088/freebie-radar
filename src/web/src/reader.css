@@ -1,0 +1,38 @@
+/* Reading overlay. Explicit close button is the only dismissal, per the user's interaction contract. */
+.reading-v3-backdrop.bubble-reader-backdrop { position: fixed; inset: 0; z-index: 60; display: flex; align-items: center; justify-content: center; padding: 1.2rem; background: #173b3473; backdrop-filter: blur(9px); }
+.bubble-reader-backdrop .reading-v3-detail { display: flex; flex-direction: column; inline-size: min(65rem, 100%); block-size: min(54rem, calc(100dvh - 2.4rem)); border: 1px solid #dce7d4; border-radius: 2.5rem; background: #fffefa; box-shadow: 0 30px 110px #173b3440; overflow: hidden; outline: none; }
+.bubble-reader-backdrop .reading-v3-detail-toolbar { display: flex; align-items: center; justify-content: space-between; gap: .8rem; flex: none; padding: .7rem 1rem .7rem 1.3rem; background: #edf4e5; border-block-end: 1px solid #dfe8d5; }
+.bubble-reader-backdrop .reading-v3-detail-toolbar > div { min-inline-size: 0; }
+.bubble-reader-backdrop .reading-v3-detail-toolbar > div > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #526e48; }
+.bubble-reader-backdrop .reading-v3-detail-toolbar > div > button { border-radius: 50%; min-inline-size: 2rem; min-block-size: 2rem; }
+.bubble-reader-close { display: grid; place-items: center; flex: none; inline-size: 2.75rem; block-size: 2.75rem; border: 1px solid #c9dbb8; border-radius: 50%; background: #dcecc8; color: #355d29; cursor: pointer; touch-action: manipulation; position: relative; z-index: 2; }
+.bubble-reader-close > svg { inline-size: 1.25rem; block-size: 1.25rem; pointer-events: none; }
+.bubble-reader-close:hover { background: #cfe4b6; }
+.bubble-reader-close:focus-visible { outline: 3px solid #376e4f; outline-offset: 3px; }
+.bubble-reader-backdrop .reading-v3-detail-scroll { flex: 1; min-block-size: 0; overflow-y: auto; overscroll-behavior: contain; }
+.bubble-reader-backdrop .reading-v3-detail-heading { padding: 1.8rem 2rem 1.4rem; border-block-end: 1px solid #e5ebdc; }
+.bubble-reader-backdrop .reading-v3-detail-title { margin: .65rem 0 1rem; color: #27492f; font-size: clamp(1.35rem, 1rem + 1vw, 1.9rem); line-height: 1.65; font-weight: 620; letter-spacing: -.025em; overflow-wrap: anywhere; }
+.reading-v3-annotations { display: flex; flex-wrap: wrap; gap: .45rem; align-items: center; font-size: .7rem; }
+.reading-v3-annotations > span { border-radius: 2rem; padding: .25rem .6rem; }
+.bubble-reader-backdrop .reading-v3-detail-columns { display: grid; grid-template-columns: minmax(0, 1fr) 12rem; }
+.bubble-reader-backdrop .reading-v3-detail-body { display: flex; flex-direction: column; gap: 1.4rem; padding: 1.5rem 1.8rem 2rem 2rem; min-inline-size: 0; }
+.bubble-reader-backdrop .reading-v3-detail-cover { inline-size: 100%; max-block-size: 18rem; aspect-ratio: 16 / 9; border-radius: 1.6rem; overflow: hidden; }
+.bubble-reader-backdrop .reading-v3-detail-notes { padding: 1.7rem 1.25rem; background: #f5f8ef; border-inline-start: 1px solid #e1e9d8; }
+.bubble-reader-backdrop .reading-v3-facts { display: grid; gap: 1.25rem; margin-block: 1.2rem; }
+.bubble-reader-backdrop .reading-v3-facts dt { color: #6b805d; font-size: .68rem; }
+.bubble-reader-backdrop .reading-v3-facts dd { color: #3f6034; font-size: .72rem; line-height: 1.9; overflow-wrap: anywhere; margin-block-start: .35rem; }
+.bubble-reader-backdrop .reading-v3-detail-actions { display: flex; align-items: center; flex-wrap: wrap; flex: none; gap: .5rem; padding: .8rem 1.3rem; background: #f5f9ee; border-block-start: 1px solid #e0e9d5; }
+.bubble-reader-backdrop .reading-v3-detail-actions > a, .bubble-reader-backdrop .reading-v3-detail-actions > button { border-radius: 2rem; min-block-size: 2.6rem; font-size: .75rem; }
+.bubble-reader-backdrop .soda-freshness.detail { background: #f6faee; border-radius: 1.5rem; border-color: #dbe7cb; }
+@media (max-width: 639px) {
+ .reading-v3-backdrop.bubble-reader-backdrop { padding: .5rem; }
+ .bubble-reader-backdrop .reading-v3-detail { block-size: calc(100dvh - 1rem); border-radius: 2rem; }
+ .bubble-reader-backdrop .reading-v3-detail-heading { padding: 1.3rem 1.1rem; }
+ .bubble-reader-backdrop .reading-v3-detail-body { padding: 1.2rem 1rem; gap: 1.1rem; }
+ .bubble-reader-backdrop .reading-v3-detail-columns { grid-template-columns: minmax(0, 1fr); }
+ .bubble-reader-backdrop .reading-v3-detail-notes { padding: 1.1rem; border-inline-start: 0; border-block-start: 1px solid #e1e9d8; }
+ .bubble-reader-backdrop .reading-v3-detail-actions { padding: .7rem .85rem max(.8rem, env(safe-area-inset-bottom)); gap: .45rem; }
+ .bubble-reader-backdrop .reading-v3-detail-actions > a { min-inline-size: 100%; min-block-size: 2.75rem; }
+ .bubble-reader-backdrop .reading-v3-detail-actions > button { flex: 1 1 40%; min-block-size: 2.6rem; font-size: .72rem; }
+ .bubble-reader-backdrop .reading-v3-detail-toolbar { padding: .55rem .7rem .55rem 1rem; }
+}
