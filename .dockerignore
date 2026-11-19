@@ -1,0 +1,13 @@
+node_modules
+dist
+data
+.env
+.env.local
+.env.private
+*.log
+docs/*.png
+docs/*.html
+docs/probe*.json
+.git
+
+backups
