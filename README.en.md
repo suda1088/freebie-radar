@@ -111,7 +111,7 @@ Upstream: [ZiChuanLan/freebie-radar](https://github.com/ZiChuanLan/freebie-radar
 Works out of the box **even without copying `.env` first**:
 
 ```bash
-git clone https://github.com/ZiChuanLan/freebie-radar.git
+git clone https://github.com/suda1088/freebie-radar.git
 cd freebie-radar
 
 # Optional: customize ADMIN_TOKEN, Telegram bot, proxy, AI, etc.
@@ -140,7 +140,7 @@ Data persists in `./data/radar.db`. Upgrades (`git pull && docker compose up -d 
 ### From Source (Node.js ≥ 22.5 + pnpm 10)
 
 ```bash
-git clone https://github.com/ZiChuanLan/freebie-radar.git
+git clone https://github.com/suda1088/freebie-radar.git
 cd freebie-radar
 
 pnpm install

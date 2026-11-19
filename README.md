@@ -109,7 +109,7 @@
 ## 工作流架构
 
 ```mermaid
-flowchart LR
+flowchart TB
   S["63 个内置源 + 自定义 RSS + 回环/油猴"] --> E["规则初筛与特征抽取（10 路封面图 / 兑换码 / 价格 / 双语去重指纹）"]
   E --> F{"统一屏蔽与噪音初筛（block_rules + NOISE_TITLE）"}
   F -->|命中屏蔽/硬噪音| D["跳过 AI 省额度并隔离"]
@@ -129,7 +129,7 @@ flowchart LR
 不需要预先安装 Node.js 或手动建表，**甚至不复制 `.env` 也可以直接启动**：
 
 ```bash
-git clone https://github.com/ZiChuanLan/freebie-radar.git
+git clone https://github.com/suda1088/freebie-radar.git
 cd freebie-radar
 
 # 可选：复制并编辑环境变量（设置 ADMIN_TOKEN 管理密码、Telegram 推送、AI 等）
@@ -160,7 +160,7 @@ docker compose logs -f --tail 50
 ### 方式二：源码运行（Node.js ≥ 22.5 + pnpm 10）
 
 ```bash
-git clone https://github.com/ZiChuanLan/freebie-radar.git
+git clone https://github.com/suda1088/freebie-radar.git
 cd freebie-radar
 
 pnpm install
