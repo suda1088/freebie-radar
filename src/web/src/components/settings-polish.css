@@ -1,0 +1,54 @@
+.settings-polish { min-width: 0; }
+.settings-polish [hidden] { display: none !important; }
+.settings-feedback {
+  position: sticky;
+  top: 12px;
+  z-index: 15;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  min-height: 46px;
+  padding: 12px 16px;
+  border: 1px solid #dce5d3;
+  border-radius: 10px;
+  background: #f7faf3;
+  color: #56664a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.settings-feedback .soda-save-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  max-width: 100%;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.settings-feedback .soda-save-status svg { flex-shrink: 0; }
+.settings-feedback .soda-save-status.error { color: #a33c30; }
+.settings-feedback .soda-save-status.saved { color: #356337; }
+.settings-feedback .soda-save-status.saving { color: #556947; }
+.settings-help { color: #728067; font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
+.settings-step { color: #728663; font-size: 11px; letter-spacing: .04em; margin-bottom: 5px; }
+.settings-task-nav { display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid #dce5d3; padding-bottom: 14px; }
+.settings-task-nav button { min-height: 44px; padding: 10px 16px; border-radius: 8px; color: #68765d; font-size: 13px; }
+.settings-task-nav button[aria-pressed="true"] { background: #e8efdf; color: #3e5f32; font-weight: 600; }
+.settings-polish button:disabled { cursor: default; opacity: .55; }
+.settings-section-contents { display: contents; }
+.settings-delivery > section:not([hidden]), .settings-delivery .settings-section-contents > section:not([hidden]) { margin-top: 16px; }
+.settings-polish .soda-section-nav { margin-bottom: 16px; }
+.settings-polish .soda-section-nav button { min-height: 64px; }
+.settings-rules.v3-preferences { gap: 20px; }
+.settings-rules .v3-preference-section { min-width: 0; }
+@media (max-width: 639px) {
+  .settings-feedback { top: 6px; padding: 10px 12px; font-size: 11px; }
+  .settings-feedback > span, .settings-feedback .soda-save-status { flex-basis: 100%; }
+  .settings-task-nav button { flex: 1; padding: 10px; }
+  .settings-polish .soda-section-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .settings-polish .soda-section-nav span { line-height: 1.5; }
+  .settings-delivery .soda-settings-toolbar button { min-height: 44px; flex-basis: calc(50% - 8px); }
+  .settings-delivery .panel > .flex, .settings-rules .border-t > .flex { flex-wrap: wrap; }
+  .settings-polish .settings-help { font-size: 11px; }
+}
