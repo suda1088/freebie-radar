@@ -490,7 +490,7 @@ export function OpsPanel({
     const tok = ingestTokenInput.trim() || "请替换为你的 INGEST_TOKEN";
     return `// ==UserScript==
 // @name         Freebie Radar 零 Cookie 上传采集助手
-// @namespace    https://github.com/ZiChuanLan/freebie-radar
+// @namespace    https://github.com/suda1088/freebie-radar
 // @version      0.1.0
 // @description  仅读取当前搜索页公开帖子标题与链接发送到你自己的 Freebie Radar，Cookie 绝不离开浏览器
 // @match        https://www.xiaohongshu.com/search_result*
