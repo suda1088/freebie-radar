@@ -5,7 +5,7 @@
 本项目使用 `node:24-alpine` 单容器运行（成品镜像 ~340 MB），内置 Node.js 原生 `node:sqlite`（WAL 模式），无需外接 PostgreSQL / Redis，且设置了 V8 堆与 SQLite 缓存限制，主服务容器实测常驻内存约 **80–100 MiB**。
 
 ```bash
-git clone https://github.com/ZiChuanLan/freebie-radar.git
+git clone https://github.com/suda1088/freebie-radar.git
 cd freebie-radar
 
 # 可选：复制并编辑环境变量（配置 ADMIN_TOKEN / Telegram 推送 / 代理等）
