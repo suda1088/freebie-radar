@@ -1,12 +1,10 @@
-> **Fork notice: this repository is a modified fork of [ZiChuanLan/freebie-radar](https://github.com/ZiChuanLan/freebie-radar), based on upstream commit [`2fb807c`](https://github.com/ZiChuanLan/freebie-radar/commit/2fb807c) (2026-11-12), MIT licensed. Upstream code is copyright ZiChuanLan; modifications in this fork are copyright suda1088. See "Comparison with Upstream" below for the differences.**
->
-> **Release status: `src/web/src` in this repository is now the complete React source of the deployed green studio UI (recovered 2026-11-19 from the server image and verified by a clean typecheck and build); a clean build reproduces the deployed UI. Note: the standalone management pages added in the later letter-style iteration (management workspace, visual multi-route push editor, source workspace) are not in this snapshot; their backend APIs are included, and porting them to the green UI is future work.**
+> **Fork notice: this repository is a modified fork of [ZiChuanLan/freebie-radar](https://github.com/ZiChuanLan/freebie-radar), based on upstream commit [`2fb807c`](https://github.com/ZiChuanLan/freebie-radar/commit/2fb807c) (2026-11-12), MIT licensed. Upstream code is copyright ZiChuanLan; modifications in this fork are copyright suda1088.**
 
 <div align="center">
   <img src="docs/logo.svg" alt="Resource Radar Logo" width="88" height="88" />
   <h1>Resource Radar · 资源雷达</h1>
-  <p><strong>Self-hosted multi-interest aggregator &amp; AI-routed radar for freebies, deals, group buys, open-source projects, and news</strong></p>
-  <p>5 Content Kinds · 21 Channel-Aware Categories · Unified Blocklist · Multi-Route Telegram Push · Zero External DB</p>
+  <p><strong>A single-user self-hosted freebie radar: whole-site password lock · in-browser AI engine · multi-route push · green studio UI</strong></p>
+  <p>5 Content Kinds · 21 Channel-Aware Categories · Unified Blocklist Saves AI Tokens · Feed List in 1–2s</p>
 
   <p>
     <a href="README.md">简体中文</a> · <a href="README.en.md">English</a>
@@ -23,12 +21,23 @@
 
 ---
 
-**Resource Radar (`freebie-radar`)** is a lightweight, self-hosted workbench that aggregates, classifies, and routes items from developer communities, gaming platforms, software giveaway feeds, GitHub, Reddit, Bluesky, Telegram channels, and custom RSS feeds.
+**Resource Radar (`freebie-radar`)** is a fork of upstream, hardened for single-user self-hosting: a whole-site password gate instead of multi-user login, an in-browser AI engine page for models and prompts, a unified blocklist that skips matching items before they reach the AI, and a visual multi-route push editor. It aggregates, classifies, and routes items from developer communities, gaming platforms, software giveaway feeds, GitHub, Reddit, Bluesky, Telegram channels, and custom RSS feeds.
 
 Instead of forcing every feed into a single freebie-only filter or dumping raw RSS noise, it separates **content kind** (`freebie | deal | opensource | info | noise`), **vertical category** (21 domains), and **obtain mode** (`free | conditional | lottery | trial | promo | paid`):
 
 - Want **strictly verified freebies**? The default **Verified Freebies** channel stays locked to AI-verified `freebie` items (`free` + `conditional`), completely isolated from paid deals, carpools, secondhand listings, or news.
 - Want **Black Friday VPS deals, carpool seats, open-source releases, or tech & major news**? Switch channels in one click to get channel-specific sub-categories, noise-free live counts, responsive image-card views, and dedicated Telegram push routes.
+
+---
+
+## Why this fork
+
+- **Whole-site password lock, made for one person**: no OAuth to wire up; Compose binds loopback only, and scheduler and push are off by default.
+- **In-browser AI engine**: edit endpoint, model, key, limits, and prompt in the web UI, test connectivity, backfill reviews, and reclassify stored items for zero tokens.
+- **Blocklist saves AI spend first**: items matching the unified blocklist are skipped before they ever reach the AI.
+- **Push split by topic**: the multi-route editor configures instant or batched delivery per kind, category, obtain mode, and keyword; notification content is encrypted with a key file.
+- **Admin UI you can actually see**: collection jobs, source ops, AI queue, push history, and failure notes all have pages — no log digging to debug.
+- **Faster feed**: the list went from 8–13s to 1–2s; 15 test files, 105 tests, all passing.
 
 ---
 
